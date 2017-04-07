@@ -1,5 +1,4 @@
-
-//OpenBot v1
+//OpenBot v1.2
 //Preleminary Release
 var Robot = function(a) {};
 var VragTank = {
@@ -412,11 +411,11 @@ Robot.prototype.onScannedRobot = function(a) {
 Robot.prototype.onWallCollision = function(a) {
     var b = a.robot;
     b.stop();
-    MT[b.id].trendMove *= -1;
+    MT[b.id].trendMove *= -2;
 };
 Robot.prototype.onRobotCollision = function(a) {
     var b = a.robot;
-    MT[b.id].trendMove *= -1;
+    MT[b.id].trendMove *= -2;
     Moved(a, 10 * MT[b.id].trendMove);
 };
 Robot.prototype.onHitByBullet = function(a) {
